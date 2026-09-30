@@ -1,0 +1,174 @@
+================================================================================
+INFORME TÉCNICO DE AUDITORÍA Y EJECUCIÓN DEL SISTEMA
+PROYECTO SELECCIÓN DE CONDUCTORES Y SIMULACIÓN ELECTROSTÁTICA (500 kV)
+LÍNEA DE TRANSMISIÓN SUBESTACIÓN LA VIRGINIA - SUBESTACIÓN ALFÉREZ
+================================================================================
+Fecha y Hora de Ejecución : 2026-09-30 12:51:02
+Tiempo Total de Cómputo   : 50.05 segundos
+
+--------------------------------------------------------------------------------
+1. PARÁMETROS DE DISEÑO Y AMBIENTALES UTILIZADOS
+--------------------------------------------------------------------------------
+  * He                                 : 980.0
+  * Ta                                 : 30.0
+  * Tc                                 : 75.0
+  * Vw                                 : 5.0
+  * phi_grados                         : 90.0
+  * Qse                                : 4500.0
+  * alfa                               : 0.5
+  * emisividad                         : 0.5
+  * k_aluminio                         : 225.0
+  * voltaje_sistema_kV                 : 500.0
+  * tipo_voltaje_csm                   : fase_tierra
+  * distancia_haz_mm                   : 457.2
+  * haces_a_evaluar                    : [3, 4]
+  * I_requerida_A                      : 2400.0
+  * R_max_UPME_ohm_km                  : 0.023
+  * cargas_ficticias_por_subconductor  : 22
+  * factor_radio_cargas                : 0.7
+  * multiplicador_control_superficie   : 100
+  * limites_malla                      : [-4.0, 4.0, -4.0, 4.0]
+  * resolucion_malla                   : 500
+  * dpi_figuras                        : 300
+  * epsilon0_F_m                       : 8.8541878128e-12
+
+--------------------------------------------------------------------------------
+2. RESUMEN ESTADÍSTICO DEL PROCESAMIENTO
+--------------------------------------------------------------------------------
+  * Total de registros leídos en catálogo       : 56
+  * Evaluaciones combinadas (conductor-haz)    : 112
+  * Descartados en Filtro Rápido Preliminar    : 58
+      - Descarte exclusivo por Resistencia (R_eq > 0.0230 Ω/km) : 15
+      - Descarte exclusivo por Corriente (I_prelim < 2400 A)       : 0
+      - Descarte por ambas restricciones técnicas                        : 43
+  * Candidatos analizados con IEEE Std 738-2012 : 54
+  * Descartados por Límite Térmico (I_fase < 2400 A) : 0
+  * Simulaciones Electrostáticas CSM Exitosas   : 54
+
+--------------------------------------------------------------------------------
+4. CONDUCTORES QUE CUMPLEN LA NORMATIVA UPME (SELECCIÓN FINAL)
+--------------------------------------------------------------------------------
+Tipo   Calibre            Code Word        Haz  Diam[mm]  Req[Ω/km]   Ifase[A]   Margen[A]  ErrCSM[%]  Emax[kV/cm]  Veredicto 
+------------------------------------------------------------------------------------------------------------------------------
+ACSR   1590 KCMIL         Falcon           4    39.23     0.00900     7809.1     5409.1     0.0100     194.657      CUMPLE    
+ACSR   1590 KCMIL         Lapwing          4    38.20     0.00900     7763.2     5363.2     0.0101     200.303      CUMPLE    
+ACSR   1510.5 KCMIL       Parrot           4    38.24     0.00950     7557.9     5157.9     0.0101     200.078      CUMPLE    
+ACSR   1510.5 KCMIL       Nuthatch         4    37.23     0.00950     7513.0     5113.0     0.0101     205.910      CUMPLE    
+ACSR   1431 KCMIL         Plover           4    37.22     0.01000     7322.3     4922.3     0.0101     205.969      CUMPLE    
+ACSR   1431 KCMIL         Bobolink         4    36.24     0.01000     7278.8     4878.8     0.0101     211.945      CUMPLE    
+ACSR   1351.5 KCMIL       Martin           4    36.17     0.01050     7100.3     4700.3     0.0101     212.385      CUMPLE    
+ACSR   1351.5 KCMIL       Dipper           4    35.21     0.01075     6974.9     4574.9     0.0101     218.589      CUMPLE    
+ACSR   1272 KCMIL         Pheasant         4    35.09     0.01125     6812.9     4412.9     0.0101     219.388      CUMPLE    
+ACSR   1272 KCMIL         Bittern          4    34.16     0.01125     6771.6     4371.6     0.0102     225.778      CUMPLE    
+ACSR   1192.5 KCMIL       Grackle          4    33.97     0.01200     6548.3     4148.3     0.0102     227.127      CUMPLE    
+ACSR   1192.5 KCMIL       Bunting          4    33.08     0.01200     6508.9     4108.9     0.0102     233.654      CUMPLE    
+ACSR   1113 KCMIL         Finch            4    32.82     0.01300     6242.3     3842.3     0.0102     235.628      CUMPLE    
+ACAR   1200 kcmil         1200 kcmil (18/19) 4    32.02     0.01300     6207.1     3807.1     0.0102     241.906      CUMPLE    
+ACSR   1113 KCMIL         Bluejay          4    31.96     0.01300     6204.5     3804.5     0.0102     242.389      CUMPLE    
+ACSR   1033.5 KCMIL       Curlew           4    31.63     0.01375     6018.5     3618.5     0.0102     245.082      CUMPLE    
+ACSR   1033.5 KCMIL       Ortolan          4    30.79     0.01400     5927.7     3527.7     0.0102     252.200      CUMPLE    
+ACSR   1590 KCMIL         Falcon           3    39.23     0.01200     5856.8     3456.8     0.0103     199.179      CUMPLE    
+ACSR   1590 KCMIL         Lapwing          3    38.20     0.01200     5822.4     3422.4     0.0103     204.847      CUMPLE    
+ACSR   954 KCMIL          Cardinal         4    30.38     0.01500     5709.0     3309.0     0.0103     255.818      CUMPLE    
+ACSR   954 KCMIL          Rail             4    29.59     0.01500     5674.2     3274.2     0.0103     263.074      CUMPLE    
+ACSR   1510.5 KCMIL       Parrot           3    38.24     0.01267     5668.4     3268.4     0.0103     204.621      CUMPLE    
+ACSR   1510.5 KCMIL       Nuthatch         3    37.23     0.01267     5634.8     3234.8     0.0103     210.475      CUMPLE    
+ACSR   900 KCMIL          Canary           4    29.51     0.01575     5534.0     3134.0     0.0103     263.831      CUMPLE    
+ACSR   1431 KCMIL         Plover           3    37.22     0.01333     5491.7     3091.7     0.0103     210.534      CUMPLE    
+ACSR   1431 KCMIL         Bobolink         3    36.24     0.01333     5459.1     3059.1     0.0103     216.531      CUMPLE    
+ACSR   900 KCMIL          Ruddy            4    28.74     0.01600     5456.9     3056.9     0.0103     271.331      CUMPLE    
+ACAR   950 kcmil          950 kcmil (18/19) 4    28.49     0.01650     5362.7     2962.7     0.0103     273.854      CUMPLE    
+ACSR   1351.5 KCMIL       Martin           3    36.17     0.01400     5325.2     2925.2     0.0103     216.972      CUMPLE    
+ACSR   1351.5 KCMIL       Dipper           3    35.21     0.01433     5231.2     2831.2     0.0104     223.197      CUMPLE    
+ACSR   795 KCMIL          Drake            4    28.13     0.01775     5155.0     2755.0     0.0103     277.567      CUMPLE    
+ACSR   1272 KCMIL         Pheasant         3    35.09     0.01500     5109.7     2709.7     0.0104     224.000      CUMPLE    
+ACSR   795 KCMIL          Cuckoo           4    27.74     0.01800     5102.4     2702.4     0.0103     281.698      CUMPLE    
+ACSR   1272 KCMIL         Bittern          3    34.16     0.01500     5078.7     2678.7     0.0104     230.410      CUMPLE    
+ACAR   850 kcmil          850 kcmil (18/19) 4    26.95     0.01825     5033.1     2633.1     0.0103     290.436      CUMPLE    
+ACSR   1192.5 KCMIL       Grackle          3    33.97     0.01600     4911.2     2511.2     0.0104     231.763      CUMPLE    
+ACSR   1192.5 KCMIL       Bunting          3    33.08     0.01600     4881.6     2481.6     0.0104     238.310      CUMPLE    
+ACSR   715.5 KCMIL        Starling         4    26.68     0.01975     4826.7     2426.7     0.0103     293.542      CUMPLE    
+ACSR   715.5 KCMIL        Stilt            4    26.31     0.02000     4780.6     2380.6     0.0103     297.902      CUMPLE    
+ACSR   1113 KCMIL         Finch            3    32.82     0.01733     4681.7     2281.7     0.0104     240.290      CUMPLE    
+ACAR   1200 kcmil         1200 kcmil (18/19) 3    32.02     0.01733     4655.3     2255.3     0.0104     246.585      CUMPLE    
+ACSR   1113 KCMIL         Bluejay          3    31.96     0.01733     4653.3     2253.3     0.0104     247.070      CUMPLE    
+ACAR   750 kcmil          750 kcmil (18/19) 4    25.31     0.02075     4650.5     2250.5     0.0104     310.329      CUMPLE    
+ACSR   666.6 KCMIL        Gannet           4    25.75     0.02125     4614.3     2214.3     0.0104     304.741      CUMPLE    
+ACSR   666.6 KCMIL        Flamingo         4    25.40     0.02150     4572.6     2172.6     0.0104     309.170      CUMPLE    
+ACSR   1033.5 KCMIL       Curlew           3    31.63     0.01833     4513.9     2113.9     0.0104     249.771      CUMPLE    
+ACSR   636 KCMIL          Grosbeak         4    25.16     0.02225     4484.7     2084.7     0.0104     312.278      CUMPLE    
+ACSR   1033.5 KCMIL       Ortolan          3    30.79     0.01867     4445.8     2045.8     0.0104     256.907      CUMPLE    
+ACSR   636 KCMIL          Rook             4    24.81     0.02250     4444.9     2044.9     0.0104     316.920      CUMPLE    
+ACSR   954 KCMIL          Cardinal         3    30.38     0.02000     4281.7     1881.7     0.0104     260.535      CUMPLE    
+ACSR   954 KCMIL          Rail             3    29.59     0.02000     4255.7     1855.7     0.0105     267.809      CUMPLE    
+ACSR   900 KCMIL          Canary           3    29.51     0.02100     4150.5     1750.5     0.0105     268.568      CUMPLE    
+ACSR   900 KCMIL          Ruddy            3    28.74     0.02133     4092.7     1692.7     0.0105     276.086      CUMPLE    
+ACAR   950 kcmil          950 kcmil (18/19) 3    28.49     0.02200     4022.0     1622.0     0.0105     278.614      CUMPLE    
+
+--------------------------------------------------------------------------------
+5. REGISTRO DETALLADO DE CONDUCTORES DESCARTADOS EN FILTRO PREVIO
+--------------------------------------------------------------------------------
+Fila  Tipo   Calibre            Code Word        Haz  Causa del Descarte
+--------------------------------------------------------------------------------
+2     ACSR   4 AWG              Swan             3    R_eq=0.44867 > 0.0230 Ω/km e I_prelim=417.0 < 2400.0 A
+2     ACSR   4 AWG              Swan             4    R_eq=0.33650 > 0.0230 Ω/km e I_prelim=556.0 < 2400.0 A
+3     ACSR   2 AWG              Sparrow          3    R_eq=0.28200 > 0.0230 Ω/km e I_prelim=552.0 < 2400.0 A
+3     ACSR   2 AWG              Sparrow          4    R_eq=0.21150 > 0.0230 Ω/km e I_prelim=736.0 < 2400.0 A
+4     ACSR   1/0 AWG            Raven            3    R_eq=0.17733 > 0.0230 Ω/km e I_prelim=729.0 < 2400.0 A
+4     ACSR   1/0 AWG            Raven            4    R_eq=0.13300 > 0.0230 Ω/km e I_prelim=972.0 < 2400.0 A
+5     ACSR   2/0 AWG            Quail            3    R_eq=0.14067 > 0.0230 Ω/km e I_prelim=834.0 < 2400.0 A
+5     ACSR   2/0 AWG            Quail            4    R_eq=0.10550 > 0.0230 Ω/km e I_prelim=1112.0 < 2400.0 A
+6     ACSR   3/0 AWG            Pigeon           3    R_eq=0.11167 > 0.0230 Ω/km e I_prelim=957.0 < 2400.0 A
+6     ACSR   3/0 AWG            Pigeon           4    R_eq=0.08375 > 0.0230 Ω/km e I_prelim=1276.0 < 2400.0 A
+7     ACSR   4/0 AWG            Penguin          3    R_eq=0.08833 > 0.0230 Ω/km e I_prelim=1098.0 < 2400.0 A
+7     ACSR   4/0 AWG            Penguin          4    R_eq=0.06625 > 0.0230 Ω/km e I_prelim=1464.0 < 2400.0 A
+8     ACSR   266.8 KCMIL        Partridge        3    R_eq=0.07100 > 0.0230 Ω/km e I_prelim=1371.0 < 2400.0 A
+8     ACSR   266.8 KCMIL        Partridge        4    R_eq=0.05325 > 0.0230 Ω/km e I_prelim=1828.0 < 2400.0 A
+9     ACSR   336.4 KCMIL        Linnet           3    R_eq=0.05600 > 0.0230 Ω/km e I_prelim=1587.0 < 2400.0 A
+9     ACSR   336.4 KCMIL        Linnet           4    R_eq=0.04200 > 0.0230 Ω/km e I_prelim=2116.0 < 2400.0 A
+10    ACSR   397.5 KCMIL        Brant            3    R_eq=0.04767 > 0.0230 Ω/km e I_prelim=1752.0 < 2400.0 A
+10    ACSR   397.5 KCMIL        Brant            4    R_eq=0.03575 > 0.0230 Ω/km e I_prelim=2336.0 < 2400.0 A
+11    ACSR   397.5 KCMIL        Ibis             3    R_eq=0.04767 > 0.0230 Ω/km e I_prelim=1761.0 < 2400.0 A
+11    ACSR   397.5 KCMIL        Ibis             4    R_eq=0.03575 > 0.0230 Ω/km e I_prelim=2348.0 < 2400.0 A
+12    ACSR   477 KCMIL          Hawk             3    R_eq=0.03967 > 0.0230 Ω/km e I_prelim=1977.0 < 2400.0 A
+12    ACSR   477 KCMIL          Hawk             4    R_eq=0.02975 > 0.0230 Ω/km
+13    ACSR   477 KCMIL          Flicker          3    R_eq=0.03967 > 0.0230 Ω/km e I_prelim=1965.0 < 2400.0 A
+13    ACSR   477 KCMIL          Flicker          4    R_eq=0.02975 > 0.0230 Ω/km
+14    ACSR   556.5 KCMIL        Dove             3    R_eq=0.03400 > 0.0230 Ω/km e I_prelim=2178.0 < 2400.0 A
+14    ACSR   556.5 KCMIL        Dove             4    R_eq=0.02550 > 0.0230 Ω/km
+15    ACSR   556.5 KCMIL        Parakeet         3    R_eq=0.03400 > 0.0230 Ω/km e I_prelim=2163.0 < 2400.0 A
+15    ACSR   556.5 KCMIL        Parakeet         4    R_eq=0.02550 > 0.0230 Ω/km
+16    ACSR   605 KCMIL          Squab            3    R_eq=0.03133 > 0.0230 Ω/km e I_prelim=2295.0 < 2400.0 A
+16    ACSR   605 KCMIL          Squab            4    R_eq=0.02350 > 0.0230 Ω/km
+17    ACSR   636 KCMIL          Rook             3    R_eq=0.03000 > 0.0230 Ω/km e I_prelim=2352.0 < 2400.0 A
+18    ACSR   636 KCMIL          Grosbeak         3    R_eq=0.02967 > 0.0230 Ω/km e I_prelim=2367.0 < 2400.0 A
+19    ACSR   666.6 KCMIL        Gannet           3    R_eq=0.02833 > 0.0230 Ω/km
+20    ACSR   666.6 KCMIL        Flamingo         3    R_eq=0.02867 > 0.0230 Ω/km
+21    ACSR   715.5 KCMIL        Starling         3    R_eq=0.02633 > 0.0230 Ω/km
+22    ACSR   715.5 KCMIL        Stilt            3    R_eq=0.02667 > 0.0230 Ω/km
+23    ACSR   795 KCMIL          Cuckoo           3    R_eq=0.02400 > 0.0230 Ω/km
+24    ACSR   795 KCMIL          Drake            3    R_eq=0.02367 > 0.0230 Ω/km
+45    ACAR   2 AWG              2 AWG (4/3)      3    R_eq=0.30900 > 0.0230 Ω/km e I_prelim=537.0 < 2400.0 A
+45    ACAR   2 AWG              2 AWG (4/3)      4    R_eq=0.23175 > 0.0230 Ω/km e I_prelim=716.0 < 2400.0 A
+46    ACAR   1/0 AWG            1/0 AWG (4/3)    3    R_eq=0.19400 > 0.0230 Ω/km e I_prelim=717.0 < 2400.0 A
+46    ACAR   1/0 AWG            1/0 AWG (4/3)    4    R_eq=0.14550 > 0.0230 Ω/km e I_prelim=956.0 < 2400.0 A
+47    ACAR   4/0 AWG            4/0 AWG (4/3)    3    R_eq=0.09700 > 0.0230 Ω/km e I_prelim=1110.0 < 2400.0 A
+47    ACAR   4/0 AWG            4/0 AWG (4/3)    4    R_eq=0.07275 > 0.0230 Ω/km e I_prelim=1480.0 < 2400.0 A
+48    ACAR   250 kcmil          250 kcmil (12/7) 3    R_eq=0.08167 > 0.0230 Ω/km e I_prelim=1251.0 < 2400.0 A
+48    ACAR   250 kcmil          250 kcmil (12/7) 4    R_eq=0.06125 > 0.0230 Ω/km e I_prelim=1668.0 < 2400.0 A
+49    ACAR   300 kcmil          300 kcmil (12/7) 3    R_eq=0.06767 > 0.0230 Ω/km e I_prelim=1404.0 < 2400.0 A
+49    ACAR   300 kcmil          300 kcmil (12/7) 4    R_eq=0.05075 > 0.0230 Ω/km e I_prelim=1872.0 < 2400.0 A
+50    ACAR   350 kcmil          350 kcmil (12/7) 3    R_eq=0.05800 > 0.0230 Ω/km e I_prelim=1545.0 < 2400.0 A
+50    ACAR   350 kcmil          350 kcmil (12/7) 4    R_eq=0.04350 > 0.0230 Ω/km e I_prelim=2060.0 < 2400.0 A
+51    ACAR   400 kcmil          400 kcmil (12/7) 3    R_eq=0.05100 > 0.0230 Ω/km e I_prelim=1680.0 < 2400.0 A
+51    ACAR   400 kcmil          400 kcmil (12/7) 4    R_eq=0.03825 > 0.0230 Ω/km e I_prelim=2240.0 < 2400.0 A
+52    ACAR   500 kcmil          500 kcmil (12/7) 3    R_eq=0.04067 > 0.0230 Ω/km e I_prelim=1935.0 < 2400.0 A
+52    ACAR   500 kcmil          500 kcmil (12/7) 4    R_eq=0.03050 > 0.0230 Ω/km
+53    ACAR   650 kcmil          650 kcmil (18/19) 3    R_eq=0.03200 > 0.0230 Ω/km e I_prelim=2265.0 < 2400.0 A
+53    ACAR   650 kcmil          650 kcmil (18/19) 4    R_eq=0.02400 > 0.0230 Ω/km
+54    ACAR   750 kcmil          750 kcmil (18/19) 3    R_eq=0.02767 > 0.0230 Ω/km
+55    ACAR   850 kcmil          850 kcmil (18/19) 3    R_eq=0.02433 > 0.0230 Ω/km
+
+================================================================================
+FIN DEL REPORTE DE AUDITORÍA
+================================================================================
